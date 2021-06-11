@@ -60,8 +60,8 @@ def main():
         transforms.Normalize(norm_mean, norm_std),
     ])
 
-    if not os.path.exists(args.train_data):
-        raise Exception("train data path is invalid")
+    if not os.path.exists(args.test_data):
+        raise Exception("test data path is invalid")
 
     # test dataset
     test_data = DVCD(args.test_data, 'test', transform=transform)                                                          

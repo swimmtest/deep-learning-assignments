@@ -155,6 +155,8 @@ def main():
         transforms.Lambda(lambda crops: torch.stack([normalizes(transforms.ToTensor()(crop)) for crop in crops])),
     ])
 
+    if not os.path.exists(args.train_data):
+        raise Exception("train data path is invalid")
 
     # build train and val dataset
     train_data = DVCD(args.train_data, 'train', transform=train_transform)                                                               
