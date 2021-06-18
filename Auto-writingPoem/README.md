@@ -25,8 +25,9 @@ Dataset from [Chinese-poetry](https://github.com/chinese-poetry/chinese-poetry/t
 **song:**
 
 1. train: `python3 train.py train --pickle_file_path "data/train_song_pickle.npz" --class_limit poet.song  --model_prefix "checkpoints/song_json" `
-
 2. test: `python3 test.py generate --pre_train_model_path checkpoints/song_json/poet.song_20.pth --prefix_words "閑云潭影日悠悠。" --start_words "湖光秋月兩相和" --pickle_file_path "data/train_song_pickle.npz" `
+
+It may occur key error in word2idx[word], you need to modify word from simplified Chinese characters to traditional Chinese characters.
 
 ## Reference
 
