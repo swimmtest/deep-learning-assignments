@@ -1,0 +1,111 @@
+{
+    "id": "k86BAFmH9zHNpCc8yVcV",
+    "name": "fg",
+    "content": [
+        {
+            "type": "text",
+            "text": "dsfasd sdf asdfasdf\n\nsfkasd fkjh as\n\nasdkfjasdkf hsdk'as dfkh\\]\n\nasd"
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                "         self.mode = mode",
+                "         self.split_n = split_n",
+                "         self.rng_seed = rng_seed",
+                "         self.transform = transform  ",
+                "         self.data_info = self._get_data_info()",
+                " ",
+                "*    def __getitem__(self, item):            ",
+                "*        path_img, label = self.data_info[item]",
+                "*        # 0 ~ 255",
+                "*        img = Image.open(path_img).convert('RGB')",
+                "*        if self.transform:",
+                "*            img = self.transform(img)",
+                "*",
+                "*        return img, label",
+                " ",
+                "     def __len__(self):"
+            ],
+            "firstLineNumber": 10,
+            "path": "DogsVsCats/dataset.py",
+            "comments": []
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " import re",
+                " import json",
+                " ",
+                "*# from IPython import embed;embed()",
+                "*def _parseRawData(author_limit=None, length_limit=None, dataset_path=\"data/\", class_limit=\"poet.tang\"):",
+                "*    def sentenceParser(para):",
+                "*        result = re.sub(u\"（.*）\", \"\", para)",
+                "*        result = re.sub(u\"{.*}\", \"\", result)",
+                "*        result = re.sub(u\"《.*》\", \"\", result)",
+                "*        result = re.sub(u\"[\\]\\[]\", \"\", result)",
+                "*",
+                "*        final_result = \"\"",
+                "*        for char_word in result:",
+                "*            if char_word not in set(\"0123456789-\"): final_result += char_word",
+                "*        final_result = re.sub(u\"。。\", u\"。\", final_result)",
+                " ",
+                "         return final_result",
+                " "
+            ],
+            "firstLineNumber": 4,
+            "path": "Auto-writingPoem/dataset.py",
+            "comments": []
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                "     def handleJson(filein_path):",
+                "         final_result = []",
+                " ",
+                "*        if not os.path.exists(filein_path):",
+                "*            raise ValueError(\"Error! not found the filein path: {}\".format(filein_path))",
+                "*        data = json.loads(open(filein_path, 'r', encoding='utf-8').read())",
+                "*        for poetry_contains in data:",
+                "*            poetry_data = \"\"",
+                "*            if author_limit is not None and poetry_contains.get(\"author\") != author_limit:",
+                "*                continue",
+                "             poetry = poetry_contains.get(\"paragraphs\")",
+                " ",
+                "             flag = False"
+            ],
+            "firstLineNumber": 22,
+            "path": "Auto-writingPoem/dataset.py",
+            "comments": [
+                "daf asdfasdl fsad\n\nlsadf lksd jf\n\nasfasd lkf [[sym:./DogsVsCats/dataset.py(4379e639-5ea3-4557-8eec-0fb2e48179d9)]] and I wanted to say [[sym-text:sub(9e6dd00e-abcc-49f0-b7e7-7ff390b11b6d)]] and that's it"
+            ]
+        }
+    ],
+    "symbols": {
+        "4379e639-5ea3-4557-8eec-0fb2e48179d9": {
+            "type": "path",
+            "text": "DogsVsCats/dataset.py",
+            "path": "DogsVsCats/dataset.py"
+        },
+        "9e6dd00e-abcc-49f0-b7e7-7ff390b11b6d": {
+            "symbol": "9e6dd00e-abcc-49f0-b7e7-7ff390b11b6d",
+            "path": "Auto-writingPoem/dataset.py",
+            "text": "sub",
+            "lineNumber": 13,
+            "lineData": "        result = re.sub(u\"[\\]\\[]\", \"\", result)",
+            "wordIndex": {
+                "start": 7,
+                "end": 7
+            },
+            "fileBlob": "",
+            "type": "generic_text"
+        }
+    },
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.9-1",
+        "file_blobs": {
+            "DogsVsCats/dataset.py": "9f8cec1ce029edce34f8ad6bf931d21415b18731",
+            "Auto-writingPoem/dataset.py": "bb6b534480c46c92ea3d71a9e85d4b58cfeb0023"
+        }
+    }
+}
