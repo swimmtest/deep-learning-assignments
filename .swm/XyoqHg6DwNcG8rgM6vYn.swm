@@ -1,0 +1,89 @@
+{
+    "id": "XyoqHg6DwNcG8rgM6vYn",
+    "name": "only snippets",
+    "content": [
+        {
+            "type": "snippet",
+            "lines": [
+                " ",
+                " ",
+                " class DogsVSCatsDataset(data.Dataset):      ",
+                "*    def __init__(self, data_dir, mode, split_n=0.9, rng_seed=620, transform=None):  ",
+                "*        self.data_dir = data_dir        ",
+                "*        self.mode = mode",
+                "*        self.split_n = split_n",
+                "*        self.rng_seed = rng_seed",
+                "*        self.transform = transform  ",
+                "*        self.data_info = self._get_data_info()",
+                " ",
+                "     def __getitem__(self, item):            ",
+                "         path_img, label = self.data_info[item]"
+            ],
+            "firstLineNumber": 5,
+            "path": "DogsVsCats/dataset.py",
+            "comments": []
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                "             raise Exception(\"\\ndata_dir:{} is a empty dir! Please checkout your path to images!\".format(self.data_dir))",
+                "         return len(self.data_info)  ",
+                " ",
+                "*    def _get_data_info(self):               ",
+                "*        img_names = os.listdir(self.data_dir)",
+                "*        # filter through .jpg",
+                "*        img_names = list(filter(lambda x: x.endswith('.jpg'), img_names))",
+                "*        if self.mode in [\"train\", \"val\"]:   ",
+                "*            # shuffle",
+                "*            random.seed(self.rng_seed)",
+                "*            random.shuffle(img_names)",
+                "*",
+                "             # labels",
+                "             img_labels = [0 if n.startswith('cat') else 1 for n in img_names]",
+                " "
+            ],
+            "firstLineNumber": 27,
+            "path": "DogsVsCats/dataset.py",
+            "comments": []
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " ",
+                "*            if self.mode == \"train\":",
+                "*                img_set = img_names[:split_idx]",
+                "*                label_set = img_labels[:split_idx]",
+                "*            elif self.mode == \"val\":",
+                "*                img_set = img_names[split_idx:]"
+            ],
+            "firstLineNumber": 44,
+            "path": "DogsVsCats/dataset.py",
+            "comments": []
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " import os",
+                " from dataset import DogsVSCatsDataset as DVCD",
+                " from torch.utils.data import DataLoader",
+                "*from network import Net",
+                "*from opts import parser",
+                " from matplotlib import pyplot as plt",
+                " # from torch.utils.tensorboard import SummaryWritter",
+                " "
+            ],
+            "firstLineNumber": 6,
+            "path": "DogsVsCats/train.py",
+            "comments": []
+        }
+    ],
+    "symbols": {},
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.9-1",
+        "file_blobs": {
+            "DogsVsCats/dataset.py": "9f8cec1ce029edce34f8ad6bf931d21415b18731",
+            "DogsVsCats/train.py": "b15988e36eec037116ac3ac4023f7369e9fc5cbd"
+        }
+    }
+}
