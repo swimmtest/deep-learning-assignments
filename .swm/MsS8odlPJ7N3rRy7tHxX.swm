@@ -1,0 +1,74 @@
+{
+    "id": "MsS8odlPJ7N3rRy7tHxX",
+    "name": "my doc",
+    "content": [
+        {
+            "type": "text",
+            "text": "dfshah\n\nlfasjkd asdflkjsad"
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " ",
+                " class DogsVSCatsDataset(data.Dataset):      ",
+                "     def __init__(self, data_dir, mode, split_n=0.9, rng_seed=620, transform=None):  ",
+                "*        self.data_dir = data_dir        ",
+                "*        self.mode = mode",
+                "*        self.split_n = split_n",
+                "*        self.rng_seed = rng_seed",
+                "         self.transform = transform  ",
+                "         self.data_info = self._get_data_info()",
+                " "
+            ],
+            "firstLineNumber": 6,
+            "path": "DogsVsCats/dataset.py",
+            "comments": []
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " ",
+                "     def __getitem__(self, item):            ",
+                "         path_img, label = self.data_info[item]",
+                "*        # 0 ~ 255",
+                "*        img = Image.open(path_img).convert('RGB')",
+                "*        if self.transform:",
+                "*            img = self.transform(img)",
+                "*",
+                "         return img, label",
+                " ",
+                "     def __len__(self):"
+            ],
+            "firstLineNumber": 15,
+            "path": "DogsVsCats/dataset.py",
+            "comments": []
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                " import argparse",
+                " ",
+                " parser = argparse.ArgumentParser()",
+                "*parser.add_argument('--save_latest_model', type=str, default='model/latest_model.pth')",
+                "*parser.add_argument('--train_data', type=str, default='data/train')",
+                "*parser.add_argument('--test_data', type=str, default='data/test')",
+                "*parser.add_argument('--save_info', type=str, default='data/tensorboard')",
+                " ",
+                " ",
+                " "
+            ],
+            "firstLineNumber": 1,
+            "path": "DogsVsCats/opts.py",
+            "comments": []
+        }
+    ],
+    "symbols": {},
+    "file_version": "2.0.1",
+    "meta": {
+        "app_version": "0.4.9-1",
+        "file_blobs": {
+            "DogsVsCats/dataset.py": "9f8cec1ce029edce34f8ad6bf931d21415b18731",
+            "DogsVsCats/opts.py": "ecfa5ee6fdfac9a458602e5bc56fc15ca52da196"
+        }
+    }
+}
