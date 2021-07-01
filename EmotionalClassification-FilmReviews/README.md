@@ -5,15 +5,18 @@ This code is implemented to classify film reviews by PyTorch using TextCNN(pretr
 ## Dependency
 
 torch==1.7.1
+
 gensim==4.0.1
+
 tqdm==4.61.1
+
 numpy==1.20.2
 
 ## Dataset
 
-* train dataset: about 20000 film reviews, pos/neg separately 10000
-* validation dataset: about 6000 film reviews, pos/neg separately 3000
-* test dataset: about 360 film reviews, pos/neg separately 180
+* **train**: about 20000 film reviews, pos/neg separately 10000
+* **validation**: about 6000 film reviews, pos/neg separately 3000
+* **test**: about 360 film reviews, pos/neg separately 180
 
 ## Results
 
