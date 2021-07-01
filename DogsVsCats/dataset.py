@@ -7,7 +7,7 @@ from PIL import Image
 class DogsVSCatsDataset(data.Dataset):      
     def __init__(self, data_dir, mode, split_n=0.9, rng_seed=620, transform=None):  
         self.data_dir = data_dir        
-        self.mode = mode
+       
         self.split_n = split_n
         self.rng_seed = rng_seed
         self.transform = transform  
