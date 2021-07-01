@@ -13,7 +13,7 @@
                 " class DogsVSCatsDataset(data.Dataset):      ",
                 "     def __init__(self, data_dir, mode, split_n=0.9, rng_seed=620, transform=None):  ",
                 "*        self.data_dir = data_dir        ",
-                "*        self.mode = mode",
+                "*       ",
                 "*        self.split_n = split_n",
                 "*        self.rng_seed = rng_seed",
                 "         self.transform = transform  ",
@@ -67,7 +67,7 @@
     "meta": {
         "app_version": "0.4.9-1",
         "file_blobs": {
-            "DogsVsCats/dataset.py": "9f8cec1ce029edce34f8ad6bf931d21415b18731",
+            "DogsVsCats/dataset.py": "203d370c05b51f2df14a420e4523ac6db350acd8",
             "DogsVsCats/opts.py": "ecfa5ee6fdfac9a458602e5bc56fc15ca52da196"
         }
     }
