@@ -4,7 +4,31 @@
     "content": [
         {
             "type": "text",
-            "text": "dsfasd sdf asdfasdf\n\nsfkasd fkjh as\n\nasdkfjasdkf hsdk'as dfkh\\]\n\nasdf"
+            "text": "dsfasd sdf asdfasdf\n\nsfkasd fkjh as\n\nasdkfjasdkf hsdk'as dfkh\\]\n\nasd"
+        },
+        {
+            "type": "snippet",
+            "lines": [
+                "         self.mode = mode",
+                "         self.split_n = split_n",
+                "         self.rng_seed = rng_seed",
+                "         self.transform = transform  ",
+                "         self.data_info = self._get_data_info()",
+                " ",
+                "*    def __getitem__(self, item):            ",
+                "*        path_img, label = self.data_info[item]",
+                "*        # 0 ~ 255",
+                "*        img = Image.open(path_img).convert('RGB')",
+                "*        if self.transform:",
+                "*            img = self.transform(img)",
+                "*",
+                "*        return img, label",
+                " ",
+                "     def __len__(self):"
+            ],
+            "firstLineNumber": 10,
+            "path": "DogsVsCats/dataset.py",
+            "comments": []
         },
         {
             "type": "snippet",
@@ -80,6 +104,7 @@
     "meta": {
         "app_version": "0.4.9-1",
         "file_blobs": {
+            "DogsVsCats/dataset.py": "9f8cec1ce029edce34f8ad6bf931d21415b18731",
             "Auto-writingPoem/dataset.py": "bb6b534480c46c92ea3d71a9e85d4b58cfeb0023"
         }
     }
